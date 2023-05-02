@@ -1,1 +1,18 @@
-@import "./reset-css.css";
+@import "./reset.css";
+
+
+.wilson {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#timer {
+    margin-left: 20px;
+    margin-top: 40px;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#timer.move {
+    transform: translateY(-20px);
+    color: red;
+}
