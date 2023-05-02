@@ -1,18 +1,23 @@
 @import "./reset.css";
 
+$font-size: 40px;
+$margin-left: 20px;
+$margin-top: 20px;
 
 .wilson {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: $margin-left;
+    margin-top: $margin-top;
+    font-size: $font-size;
 }
 
 #timer {
-    margin-left: 20px;
-    margin-top: 40px;
+    font-size: $font-size;
+    margin-left: $margin-left;
+    margin-top: $margin-top;
     transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
-}
 
-#timer.move {
-    transform: translateY(-20px);
-    color: red;
+    &.move {
+        transform: translateY(-20px);
+        color: red;
+    }
 }

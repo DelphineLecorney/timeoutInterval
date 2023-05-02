@@ -2,14 +2,15 @@
 .wilson {
   margin-left: 20px;
   margin-top: 20px;
+  font-size: 40px;
 }
 
 #timer {
+  font-size: 40px;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
   transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
-
 #timer.move {
   transform: translateY(-20px);
   color: red;

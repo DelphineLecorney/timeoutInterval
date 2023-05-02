@@ -7,30 +7,23 @@ let message = "Wilson-2";
 let index = 0;
 let colors = ["red", "blue", "green", "grey", "orange", "purple"];
 
-// Créer la div pour afficher le message
 let messageContainer = document.createElement("div");
 messageContainer.classList.add("wilson");
 document.body.appendChild(messageContainer);
 
+let messageInterval = setInterval(typewriter, 1000);
+
 function typewriter() {
   if (index < message.length) {
-    // cahrAt() renvoie une chaîne caractère par caractère
     messageContainer.textContent += message.charAt(index);
-    // change à chaque itération la couleur
     messageContainer.style.color = colors[index % colors.length];
     index++;
   } else {
     clearInterval(messageInterval);
   }
 }
-let messageInterval = setInterval(typewriter, 1000);
+typewriter();
 
-/* Write a function that displays every second that has passed on 
-the page since it was opened. The display should be refreshed every second. 
-If 60 seconds are elapsed, write "a minute has passed", then "2 minutes have 
-passed" (for 120 seconds and more), etc.
-Feel free to once again, add a transition effect! ( a different one 
-this time of course) */
 
 function displaySeconds() {
   let seconds = 0;
@@ -55,5 +48,4 @@ function displaySeconds() {
     }
   }, 1500);
 }
-
 displaySeconds();
